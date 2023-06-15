@@ -1,20 +1,11 @@
 #include "bsp_gpio.h"
-/***************************************************************
-Copyright © zuozhongkai Co., Ltd. 1998-2019. All rights reserved.
-文件名	: 	 bsp_gpio.h
-作者	   : 左忠凯
-版本	   : V1.0
-描述	   : GPIO操作文件。
-其他	   : 无
-论坛 	   : www.wtmembed.com
-日志	   : 初版V1.0 2019/1/4 左忠凯创建
-		 V2.0 2019/1/4 左忠凯修改:
-		 修改gpio_init()函数，支持中断配置.
-		 添加gpio_intconfig()函数，初始化中断
-		 添加gpio_enableint()函数，使能中断
-		 添加gpio_clearintflags()函数，清除中断标志位
-		 
-***************************************************************/
+/*
+GPIO操作文件
+修改gpio_init()函数，支持中断配置.
+添加gpio_intconfig()函数，初始化中断
+添加gpio_enableint()函数，使能中断
+添加gpio_clearintflags()函数，清除中断标志位
+*/
 
 /*
  * @description		: GPIO初始化。
