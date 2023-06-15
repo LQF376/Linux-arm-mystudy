@@ -92,8 +92,7 @@ void imx6u_clkinit(void)
 	/* 要先关闭AHB_ROOT_CLK输出，否则时钟设置会出错 */
 	CCM->CBCDR &= ~(7 << 10);	/* CBCDR的AHB_PODF清零 */
 	CCM->CBCDR |= 2 << 10;		/* AHB_PODF 3分频，AHB_CLK_ROOT=132MHz */
-	while(CCM->CDHIPR & (1 << 1));/
-* 等待握手完成 */
+	while(CCM->CDHIPR & (1 << 1));  /* 等待握手完成 */
 #endif
 	
 	/* 5、设置IPG_CLK_ROOT最小3Mhz，最大66Mhz (boot rom自动设置好了可以不用设置)*/
