@@ -1,16 +1,5 @@
-/***************************************************************
-Copyright © zuozhongkai Co., Ltd. 1998-2019. All rights reserved.
-文件名	: 	 start.s
-作者	   : 左忠凯
-版本	   : V1.0
-描述	   : ZERO-I.MX6UL/I.MX6ULL开发板启动文件，完成C环境初始化，
-		 C环境初始化完成以后跳转到C代码。
-其他	   : 无
-论坛 	   : www.wtmembed.com
-日志	   : 初版V1.0 2019/1/3 左忠凯修改
-		 V2.0 2019/1/4 左忠凯修改
-		 添加中断相关定义
-**************************************************************/
+/* I.MX6UL/I.MX6ULL开发板启动文件，完成C环境初始化，C环境初始化完成以后跳转到C代码 */
+
 
 .global _start  				/* 全局标号 */
 
@@ -25,7 +14,7 @@ _start:
 	ldr pc, =SVC_Handler		/* SVC(Supervisor)中断 		*/
 	ldr pc, =PrefAbort_Handler	/* 预取终止中断 					*/
 	ldr pc, =DataAbort_Handler	/* 数据终止中断 					*/
-	ldr	pc, =NotUsed_Handler	/* 未使用中断					*/
+	ldr pc, =NotUsed_Handler	/* 未使用中断					*/
 	ldr pc, =IRQ_Handler		/* IRQ中断 					*/
 	ldr pc, =FIQ_Handler		/* FIQ(快速中断)未定义中断 			*/
 
@@ -38,12 +27,12 @@ Reset_Handler:
 	 * 采取读-改-写的方式。
 	 */
 	mrc     p15, 0, r0, c1, c0, 0     /* 读取CP15的C1寄存器到R0中       		        	*/
-    bic     r0,  r0, #(0x1 << 12)     /* 清除C1寄存器的bit12位(I位)，关闭I Cache            	*/
-    bic     r0,  r0, #(0x1 <<  2)     /* 清除C1寄存器的bit2(C位)，关闭D Cache    				*/
-    bic     r0,  r0, #0x2             /* 清除C1寄存器的bit1(A位)，关闭对齐						*/
-    bic     r0,  r0, #(0x1 << 11)     /* 清除C1寄存器的bit11(Z位)，关闭分支预测					*/
-    bic     r0,  r0, #0x1             /* 清除C1寄存器的bit0(M位)，关闭MMU				       	*/
-    mcr     p15, 0, r0, c1, c0, 0     /* 将r0寄存器中的值写入到CP15的C1寄存器中	 				*/
+	bic     r0,  r0, #(0x1 << 12)     /* 清除C1寄存器的bit12位(I位)，关闭I Cache            	*/
+	bic     r0,  r0, #(0x1 <<  2)     /* 清除C1寄存器的bit2(C位)，关闭D Cache    				*/
+	bic     r0,  r0, #0x2             /* 清除C1寄存器的bit1(A位)，关闭对齐						*/
+	bic     r0,  r0, #(0x1 << 11)     /* 清除C1寄存器的bit11(Z位)，关闭分支预测					*/
+	bic     r0,  r0, #0x1             /* 清除C1寄存器的bit0(M位)，关闭MMU				       	*/
+	mcr     p15, 0, r0, c1, c0, 0     /* 将r0寄存器中的值写入到CP15的C1寄存器中	 				*/
 
 	
 #if 0
