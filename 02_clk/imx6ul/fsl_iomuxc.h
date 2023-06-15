@@ -1,15 +1,3 @@
-/**************************************************************
-Copyright © zuozhongkai Co., Ltd. 1998-2019. All rights reserved.
-文件名	: 	 fsl_iomuxc.h
-作者	   : 左忠凯修改NXP官方SDK
-版本	   : V1.0
-描述	   : NXP官方SDK的寄存器地址定义文档
-其他	   : NXP官方SDK的寄存器地址定义文档，默认基于IAR的，
-		 由左忠凯移植到Liux下。
-论坛 	   : www.wtmembed.com
-日志	   : 初版V1.0 2019/1/4 左忠凯移植
-**************************************************************/
-
 #ifndef _FSL_IOMUXC_H_
 #define _FSL_IOMUXC_H_
 
