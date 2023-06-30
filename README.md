@@ -7,3 +7,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 
 [Linux内核移植及根文件系统的构建](https://github.com/LQF376/Linux-arm-mystudy/issues/2#issue-1725272226)
+
+[字符设备驱动（旧）](https://github.com/LQF376/Linux-arm-mystudy/issues/15#issue-1743746305)
