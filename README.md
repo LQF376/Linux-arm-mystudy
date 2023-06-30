@@ -5,6 +5,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 **静心！静心！并且坚定地相信自己！！！**
 
+[Git 的使用说明](https://github.com/LQF376/Linux-arm-mystudy/issues/29#issue-1773257271)
 
 [Linux内核移植及根文件系统的构建](https://github.com/LQF376/Linux-arm-mystudy/issues/2#issue-1725272226)
 
