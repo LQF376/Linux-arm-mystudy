@@ -16,3 +16,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 [新字符设备驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/16#issue-1743809110)
 
 [设备树](https://github.com/LQF376/Linux-arm-mystudy/issues/17#issue-1743944581)
+
+[pinctrl 和 gpio 子系统](https://github.com/LQF376/Linux-arm-mystudy/issues/3#issue-1725509658)
