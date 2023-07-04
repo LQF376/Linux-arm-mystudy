@@ -19,6 +19,9 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [字符串处理](https://github.com/LQF376/Linux-arm-mystudy/issues/34#issue-1787194962)
 
+[系统信息与系统资源](https://github.com/LQF376/Linux-arm-mystudy/issues/35#issue-1787469707)
+
+
 ## Linux 驱动部分
 
 [Linux内核移植及根文件系统的构建](https://github.com/LQF376/Linux-arm-mystudy/issues/2#issue-1725272226)
