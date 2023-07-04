@@ -15,6 +15,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [标准 I/O](https://github.com/LQF376/Linux-arm-mystudy/issues/32#issue-1786097801)
 
+[文件属性与目录](https://github.com/LQF376/Linux-arm-mystudy/issues/33#issue-1787100414)
+
 ## Linux 驱动部分
 
 [Linux内核移植及根文件系统的构建](https://github.com/LQF376/Linux-arm-mystudy/issues/2#issue-1725272226)
