@@ -43,3 +43,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 [Linux 内核定时器](https://github.com/LQF376/Linux-arm-mystudy/issues/7#issue-1726894617)
 
 [异步通知（信号）](https://github.com/LQF376/Linux-arm-mystudy/issues/38#issue-1791336586)
+
+[platform 设备驱动 ](https://github.com/LQF376/Linux-arm-mystudy/issues/39#issue-1791360577)
