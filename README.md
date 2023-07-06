@@ -39,3 +39,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 [蜂鸣器（基于 pinctrl 和 gpio 子系统）](https://github.com/LQF376/Linux-arm-mystudy/issues/4#issue-1725572245)
 
 [并发与竞争](https://github.com/LQF376/Linux-arm-mystudy/issues/30#issue-1782541538)
+
+[Linux 内核定时器](https://github.com/LQF376/Linux-arm-mystudy/issues/7#issue-1726894617)
