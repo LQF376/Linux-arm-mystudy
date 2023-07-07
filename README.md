@@ -49,3 +49,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 [MISC驱动（结合 platfrom 和 蜂鸣器）](https://github.com/LQF376/Linux-arm-mystudy/issues/5#issue-1725718852)
 
 [Input 子系统](https://github.com/LQF376/Linux-arm-mystudy/issues/6#issue-1726845940)
+
+[Linux 下 LCD驱动（需结合裸机）](https://github.com/LQF376/Linux-arm-mystudy/issues/40#issue-1793721658)
