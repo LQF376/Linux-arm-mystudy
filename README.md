@@ -51,3 +51,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 [Input 子系统](https://github.com/LQF376/Linux-arm-mystudy/issues/6#issue-1726845940)
 
 [Linux 下 LCD驱动（需结合裸机）](https://github.com/LQF376/Linux-arm-mystudy/issues/40#issue-1793721658)
+
+[Linux 下 RTC 驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/41#issue-1795289400)
