@@ -57,3 +57,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 [Linux 下 I2C 驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/42#issue-1795869550)
 
 [Linux 下 SPI 驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/43#issue-1796207691)
+
+[Linux 下 UART 驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/44#issue-1796328647)
