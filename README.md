@@ -60,4 +60,4 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [Linux 下 UART 驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/44#issue-1796328647)
 
-[Linux CAN 通信（驱动）](https://github.com/LQF376/Linux-arm-mystudy/issues/45#issue-1798234100)
+[Linux CAN 通信（通信原理及驱动）](https://github.com/LQF376/Linux-arm-mystudy/issues/45#issue-1798234100)
