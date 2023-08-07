@@ -9,7 +9,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [Git 的使用说明](https://github.com/LQF376/Linux-arm-mystudy/issues/29#issue-1773257271)
 
-[[MQTT](markdown_doc/MQTT.md)](https://github.com/LQF376/Linux-arm-mystudy/blob/2361a122a2a258c528f9c94682fa453127fa84ba/markdown_doc/MQTT.md)
+[MQTT](https://github.com/LQF376/Linux-arm-mystudy/blob/2361a122a2a258c528f9c94682fa453127fa84ba/markdown_doc/MQTT.md)
 
 ## Linux 应用开发部分
 
