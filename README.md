@@ -11,7 +11,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 ## MQTT
 
-[MQTT](https://github.com/LQF376/Linux-arm-mystudy/blob/2361a122a2a258c528f9c94682fa453127fa84ba/markdown_doc/MQTT.md)
+[MQTT](https://github.com/LQF376/Linux-arm-mystudy/blob/b189d27df2b2c7821b0e73dd5172f11c1c733b1c/markdown_doc/MQTT.md)
 
 ## Linux 应用开发部分
 
