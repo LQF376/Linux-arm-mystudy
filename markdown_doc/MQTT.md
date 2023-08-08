@@ -516,17 +516,17 @@ timeout：超时时间。 客户端将断开连接延迟最多 timeout 时间（
 
 static int msgarrvd(void *context, char *topicName, int topicLen, MQTTClient_message *message)
 {
-    if (!strcmp(topicName, LED_TOPIC)) 
-    { //校验消息的主题
+	if (!strcmp(topicName, LED_TOPIC))
+	{ //校验消息的主题
 		if (!strcmp("2", message->payload)) //如果接收到的消息是"2"则设置 LED 为呼吸灯模式
 			system("echo heartbeat > /sys/class/leds/sys-led/trigger");
 		if (!strcmp("1", message->payload)) 
-        { //如果是"1"则 LED 常量
+		{ //如果是"1"则 LED 常量
 			system("echo none > /sys/class/leds/sys-led/trigger");
 			system("echo 1 > /sys/class/leds/sys-led/brightness");
 		}
 		else if (!strcmp("0", message->payload)) 
-    	{//如果是"0"则 LED 熄灭
+		{//如果是"0"则 LED 熄灭
 			system("echo none > /sys/class/leds/sys-led/trigger");
 			system("echo 0 > /sys/class/leds/sys-led/brightness");
 		}
