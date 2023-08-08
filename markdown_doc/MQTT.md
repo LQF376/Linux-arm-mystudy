@@ -16,7 +16,7 @@
 
 客户端发布消息时需要为消息指定一个“主题”，表示消息发布到该主题；而订阅消息的客户端，通过订阅“主题”来订阅消息，这样当其他客户端或者当前客户端向该主题发布消息时，MQTT 服务端就会向该主题的信息发送给该主题的订阅者（客户端）
 
-![1691395630155](E:\typora\markdownImage\1691395630155.png)
+![1691395630155](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691395630155.png)
 
 ### 1.2 客户端连接服务端的过程
 
@@ -45,7 +45,7 @@
 
 #### CONNECT 报文
 
-![1691395988353](E:\typora\markdownImage\1691395988353.png)
+![1691395988353](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691395988353.png)
 
 > clientID：客户端标识，服务端用来区分不同的客户端
 >
@@ -60,7 +60,7 @@
 
 #### CONNACK 报文
 
-![1691397097430](E:\typora\markdownImage\1691397097430.png)
+![1691397097430](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691397097430.png)
 
 > returnCode：服务端收到客户端的连接请求后，会向客户端发送一个 returnCode（连接返回码）；非零表示连接失败
 >
@@ -69,9 +69,9 @@
 > - sessionPresent = 1，服务端为客户端保存了上一次连接时的会话状态
 > - sessionPresent = 0，没有保存会话状态
 
-![1691398531777](E:\typora\markdownImage\1691398531777.png)
+![1691398531777](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691398531777.png)
 
-![1691398547263](E:\typora\markdownImage\1691398547263.png)
+![1691398547263](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691398547263.png)
 
 ### 1.3 客户端与服务端断开连接
 
@@ -81,7 +81,7 @@
 
 客户端向服务端发布消息，其实就是向服务端发送一个 PUBLISH 报文，服务端收到客户端的 PUBLISH 报文之后，会回复一个报文（根据 QoS 不同，回复的报文类型不同）
 
-![1691398797637](E:\typora\markdownImage\1691398797637.png)
+![1691398797637](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691398797637.png)
 
 > packetId：报文标识符；用来识别管理不同的报文，只有 QoS > 0，报文标识符才是非零数值
 >
@@ -108,7 +108,7 @@
 
 > 包含：订阅返回码（是否订阅成功） 和 报文标识符
 
-![1691399612946](E:\typora\markdownImage\1691399612946.png)
+![1691399612946](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691399612946.png)
 
 ### 1.6 取消订阅
 
@@ -156,7 +156,7 @@
 
 #### QoS = 1
 
-![1691400508644](E:\typora\markdownImage\1691400508644.png)
+![1691400508644](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691400508644.png)
 
 - 发送端向接收端发送 PUBLISH 报文，当接收端收到 PUBLISH 报文后会向发送端回复一个 PUBACK 报文，如果发送端收到 PUBACK 报文，则表示接收端已成功收到该消息
 - 若一段时间内，发送端未接收到 PUBACK 报文，那么发送端将再次发送消息（PUBLISH 报文中 dup 置 true）
@@ -188,7 +188,7 @@
 
 客户端在“连接”的时候就写好遗嘱，这样一旦客户端意外断线，服务端就可以将客户端的遗嘱公之于众
 
-![1691401451564](E:\typora\markdownImage\1691401451564.png)
+![1691401451564](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691401451564.png)
 
 > willTopic：遗嘱主题；告知服务端，遗嘱主题是什么，只有订阅了遗嘱主题的客户端才会收到消息
 >
