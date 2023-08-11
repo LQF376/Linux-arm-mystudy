@@ -2,7 +2,7 @@
 
 - 容器适配器（一个封装了序列容器的类模板，它在一般序列容器的基础上提供了一些不同的功能）
 
-![1691725413165](E:\typora\markdownImage\1691725413165.png)
+![1691725413165](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691725413165.png)
 
 - stack 容器适配器的模板有两个参数：第一个参数是存储对象的类型，第二个参数是底层容器的类型；
 - stack<T> 的底层容器默认是 deque<T> 容器；通过指定第二个模板类型参数，可以使用任意类型的底层容器，只要它们支持 back()、push_back()、pop_back()、empty()、size() 这些操作。下面展示了如何定义一个使用 list<T> 的堆栈
