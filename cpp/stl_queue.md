@@ -2,7 +2,8 @@
 
 - 只能访问 queue<T> 容器适配器的第一个和最后一个元素。只能在容器的末尾添加新元素，只能从头部移除元素
 
-![1691734491455](E:\typora\markdownImage\1691734491455.png)
+![1691734491455](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1691734491455.png)
+
 
 ## 初始化 queue
 
