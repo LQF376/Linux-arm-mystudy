@@ -19,7 +19,7 @@ mjpg_streamer -i "/usr/lib/mjpg-streamer/input_uvc.so -d /dev/video1 -f 30 -q 90
 http://192.168.5.9:8080/stream.html
 ```
 
-![img](E:\typora\markdownImage\v2-913018fec9045d2772567d8ae383b0a0_r.jpg)
+![img](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/v2-913018fec9045d2772567d8ae383b0a0_r.jpg)
 
 MJPG-Streamer 工作时，除了 main 线程，还会起 2 个线程（输入插件和输出插件）；main 线程会调用 dlopen() 函数打开指定的库文件，并运行里面的 init() 和 run() 函数
 
@@ -29,7 +29,7 @@ output_http init() 处理用户传入的参数，run() 会创建一个 server �
 
 ## ffmpeg 方案
 
-![1692098956850](E:\typora\markdownImage\1692098956850.png)
+![1692098956850](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1692098956850.png)
 
 > 推流端：ffmpeg 使用 RTMP 协议向 Nginx 流媒体服务器推流
 >
@@ -42,7 +42,7 @@ output_http init() 处理用户传入的参数，run() 会创建一个 server �
 
 协议转换：流媒体服务器通过将 RTMP 推流数据解码，并以 FLV 格式封装，然后通过 HTTP 协议传输给客户端
 
-![1692099405204](E:\typora\markdownImage\1692099405204.png)
+![1692099405204](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1692099405204.png)
 
 > 协议层：将标准封装格式的数据用流媒体协议进行打包；常用流媒体协议：RTMP、HTTP
 >
@@ -54,7 +54,7 @@ output_http init() 处理用户传入的参数，run() 会创建一个 server �
 
 配置 /etc/nginx/nginx.conf；添加 rtmp 节点
 
-![1692103094870](E:\typora\markdownImage\1692103094870.png)
+![1692103094870](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1692103094870.png)
 
 ```shell
 ffmpeg -f v4l2 -framerate 10 -i /dev/video1 -q 10 -f flv rtmp://127.0.0.1/live.wei   # 推流
@@ -71,8 +71,8 @@ ffmpeg 和 Nginx 都部署在开发板上，拉流端只能在局域网内，不
 - 把 Nginx 放到公网服务器上
 - 使用内网穿透技术，把开发板暴露到公网
 
-![1692102526883](E:\typora\markdownImage\1692102526883.png)
+![1692102526883](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1692102526883.png)
 
 内网穿透的两种实现方法：
 
-![1692102789158](E:\typora\markdownImage\1692102789158.png)
+![1692102789158](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1692102789158.png)
