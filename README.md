@@ -44,6 +44,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [设备树](https://github.com/LQF376/Linux-arm-mystudy/issues/17#issue-1743944581)
 
+[OF设备树函数](https://github.com/LQF376/Linux-arm-mystudy/blob/aa45b992656c05818fa39f92aea5009fc599af4c/markdown_doc/of_devicetree.md)
+
 [pinctrl 和 gpio 子系统](https://github.com/LQF376/Linux-arm-mystudy/issues/3#issue-1725509658)
 
 [蜂鸣器（基于 pinctrl 和 gpio 子系统）](https://github.com/LQF376/Linux-arm-mystudy/issues/4#issue-1725572245)
