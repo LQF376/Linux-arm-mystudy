@@ -35,6 +35,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [线程](https://github.com/LQF376/Linux-arm-mystudy/blob/2934005cf20de3557f59c922beed1fed854d453f/markdown_doc/xiancheng.md)
 
+[高级I/O](https://github.com/LQF376/Linux-arm-mystudy/blob/e2d002efeb6b5e8808a82694416b3400a605e3ec/markdown_doc/gaoji_IO.md)
+
 
 ## Linux 驱动部分
 
