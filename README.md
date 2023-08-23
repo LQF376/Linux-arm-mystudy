@@ -33,6 +33,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [进程](https://github.com/LQF376/Linux-arm-mystudy/blob/fbd65c0b6dfdfcdce2d164e07ed713b8c1b4417a/markdown_doc/jincheng.md)
 
+[线程](https://github.com/LQF376/Linux-arm-mystudy/blob/2934005cf20de3557f59c922beed1fed854d453f/markdown_doc/xiancheng.md)
+
 
 ## Linux 驱动部分
 
