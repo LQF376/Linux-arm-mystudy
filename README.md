@@ -19,7 +19,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 ## Linux 应用开发部分
 
-[文件 I/O](https://github.com/LQF376/Linux-arm-mystudy/issues/31#issue-1785160730)
+[文件 I/O](https://github.com/LQF376/Linux-arm-mystudy/blob/a704312867ea06db7caca2841c314b579891ff32/markdown_doc/wenjian_IO.md)
 
 [标准 I/O](https://github.com/LQF376/Linux-arm-mystudy/issues/32#issue-1786097801)
 
