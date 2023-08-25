@@ -80,6 +80,10 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [Linux CAN 通信（通信原理及驱动）](https://github.com/LQF376/Linux-arm-mystudy/issues/45#issue-1798234100)
 
+## cpp 基础
+
+[菜鸟教程/基础语法](https://www.runoob.com/cplusplus/cpp-multithreading.html)
+
 [块设备驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/13#issue-1738324352)
 
 ## 其他
