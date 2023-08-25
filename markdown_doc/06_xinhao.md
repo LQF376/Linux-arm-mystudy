@@ -227,7 +227,7 @@ char *strsignal(int sig);	// 或许字符串描述信息
 
 ### 6.5 psignal
 
-在标准错误（stderr）上输出信号描述信息
+在标准错误（stderr）上输出信号描述信息，并且允许用户添加一些输出信息，由参数s指定；输出格式 s： （信号描述信息）
 
 ```c
 #include <signal.h>
