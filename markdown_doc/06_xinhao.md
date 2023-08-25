@@ -40,7 +40,7 @@ kill -l  # 查看所有信号（64种）
 
 ## 3. 常见信号与默认行为
 
-![1682428849044](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/)
+![1682428849044](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1682428849044.png)
 
 ## 3. 设置信号处理方式
 
