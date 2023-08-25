@@ -25,7 +25,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [文件属性与目录](https://github.com/LQF376/Linux-arm-mystudy/blob/0cc63c1224c802b21c47888c880a52ece842d2ad/markdown_doc/wenjianshuxing.md)
 
-[字符串处理](https://github.com/LQF376/Linux-arm-mystudy/issues/34#issue-1787194962)
+[字符串处理](https://github.com/LQF376/Linux-arm-mystudy/blob/6c4c6a04cb5273671d8c35622517cb3189fce84e/markdown_doc/04_zifuchuanchuli.md)
 
 [系统信息与系统资源](https://github.com/LQF376/Linux-arm-mystudy/blob/d65223200da38d10549a9cebf8ac67c2b36760e3/markdown_doc/05_xitongziyuan.md)
 
