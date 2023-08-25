@@ -23,7 +23,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [标准 I/O](https://github.com/LQF376/Linux-arm-mystudy/issues/32#issue-1786097801)
 
-[文件属性与目录](https://github.com/LQF376/Linux-arm-mystudy/issues/33#issue-1787100414)
+[文件属性与目录](https://github.com/LQF376/Linux-arm-mystudy/blob/0cc63c1224c802b21c47888c880a52ece842d2ad/markdown_doc/wenjianshuxing.md)
 
 [字符串处理](https://github.com/LQF376/Linux-arm-mystudy/issues/34#issue-1787194962)
 
