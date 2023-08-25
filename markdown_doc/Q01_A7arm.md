@@ -18,7 +18,7 @@ Cortex-A7 MPCore 支持在一个处理器上选配 1~4 个内核
 
 ## 3. Cortex-A 寄存器组
 
-- ARM 架构提供 16 个 32 位通用寄存器(R0~R15)供软件使用，前 15 个(R0~R14)可以用作通用的数据存储，R15 是程序计数器 PC，用来保存将要执行的指令
+- ARM 架构提供 16 个 32 位通用寄存器(R0 ~ R15)供软件使用，前 15 个(R0 ~ R14)可以用作通用的数据存储，R15 是程序计数器 PC，用来保存将要执行的指令
 - ARM 还提供了一个当前程序状态寄存器 CPSR 和一个备份程序状态寄存器 SPSR， SPSR 寄存器就是 CPSR 寄存器的备份 
 
 ![1686141666417](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686141666417.png)
