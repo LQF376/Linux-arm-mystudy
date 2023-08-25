@@ -62,7 +62,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [异步通知（信号）](https://github.com/LQF376/Linux-arm-mystudy/issues/38#issue-1791336586)
 
-[platform 设备驱动 ](https://github.com/LQF376/Linux-arm-mystudy/issues/39#issue-1791360577)
+[platform 设备驱动 ](https://github.com/LQF376/Linux-arm-mystudy/blob/334a51b8ffb0c9126c96ea1d1118c22c6dd07753/markdown_doc/Q12_platfrom.md)
 
 [MISC驱动（结合 platfrom 和 蜂鸣器）](https://github.com/LQF376/Linux-arm-mystudy/issues/5#issue-1725718852)
 
