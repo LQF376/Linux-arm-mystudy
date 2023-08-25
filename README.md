@@ -27,7 +27,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [字符串处理](https://github.com/LQF376/Linux-arm-mystudy/issues/34#issue-1787194962)
 
-[系统信息与系统资源](https://github.com/LQF376/Linux-arm-mystudy/issues/35#issue-1787469707)
+[系统信息与系统资源](https://github.com/LQF376/Linux-arm-mystudy/blob/d65223200da38d10549a9cebf8ac67c2b36760e3/markdown_doc/05_xitongziyuan.md)
 
 [信号](https://github.com/LQF376/Linux-arm-mystudy/issues/36#issue-1787527913)
 
