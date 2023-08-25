@@ -212,5 +212,57 @@ static int test_open(struct inode *inode, struct file *filp)
 }
 ```
 
+## 4. 整体代码逻辑
+
+```c
+struct class *class;		// 类
+struct device *device;		// 设备
+dev_t devid;				// 设备号	
+int major;
+int minor;
+
+/* 驱动入口 */
+static int __init xxx_init(void)
+{
+    /* 1. 分配设备号 */
+    if(major)
+	{
+		devid = MKDEV(major, 0);
+		register_chrdev_region(devid, 1, "test");
+	}
+	else
+	{
+		alloc_chrdev_region(&devid, 0, 1, "test");
+		major = MAJOR(devid);
+		minor = MINOR(devid);
+	}
+    /* 初始化 cdev */
+        cdev_init(cdev, file_option);
+    /* 添加一个字符设备 */
+        cdev_add(cdev, dev_t, 1);
+	/* 2. 创建类 */
+	class = class_create(THIS_MODULE, "xxx");
+	/* 3. 创建设备 */
+	device = device_create(class, NULL, devid, NULL, "xxx");
+	return 0;
+}
+
+/* 驱动出口 */
+static void __exit xxx_exit(void)
+{
+    /* 卸载字符设备 */
+        cdev_del(cdev);
+    /* 释放设备号 */
+        unregister_chrdev_region(dev_t, 1);
+	/* 删除设备 */
+	device_destroy(class, dev_t);
+	/* 删除类 */
+	class_destroy(class);
+}
+
+module_init(xxx_init);
+module_exit(xxx_exit);
+```
+
 
 
