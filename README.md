@@ -48,7 +48,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [新字符设备驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/16#issue-1743809110)
 
-[设备树](https://github.com/LQF376/Linux-arm-mystudy/issues/17#issue-1743944581)
+[设备树](https://github.com/LQF376/Linux-arm-mystudy/blob/3352be2673c4706b21eabe28222cebb1bc8700fc/markdown_doc/Q05_deviceTree.md)
 
 [OF设备树函数](https://github.com/LQF376/Linux-arm-mystudy/blob/aa45b992656c05818fa39f92aea5009fc599af4c/markdown_doc/of_devicetree.md)
 
