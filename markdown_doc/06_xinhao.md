@@ -315,7 +315,10 @@ typedef union sigval
 ```
 
 ```c
-sigqueue(pid, sig, sig_val)
+union sigval sig_val;
+sig_val.sival_int = 10;
+
+sigqueue(pid, sig, sig_val);
 --------------
 static void sig_handler(int sig, siginfo_t *info, void *context)
 {
