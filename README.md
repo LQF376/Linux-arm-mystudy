@@ -21,7 +21,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [文件 I/O](https://github.com/LQF376/Linux-arm-mystudy/blob/a704312867ea06db7caca2841c314b579891ff32/markdown_doc/wenjian_IO.md)
 
-[标准 I/O](https://github.com/LQF376/Linux-arm-mystudy/issues/32#issue-1786097801)
+[标准 I/O](https://github.com/LQF376/Linux-arm-mystudy/blob/500f556658991e1127839e78eb2e25c5f984bb0b/markdown_doc/biaozhun_IO.md)
 
 [文件属性与目录](https://github.com/LQF376/Linux-arm-mystudy/blob/0cc63c1224c802b21c47888c880a52ece842d2ad/markdown_doc/wenjianshuxing.md)
 
