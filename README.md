@@ -46,7 +46,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [字符设备驱动（旧）](https://github.com/LQF376/Linux-arm-mystudy/blob/ffd41d55f65012d9da0a9537c89c6359a314ed69/markdown_doc/Q03_zifudevice.md)
 
-[新字符设备驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/16#issue-1743809110)
+[新字符设备驱动](https://github.com/LQF376/Linux-arm-mystudy/blob/26a49bbf388d472fa9c478bc3db14db7c93a5773/markdown_doc/Q04_newchrdev.md)
 
 [设备树](https://github.com/LQF376/Linux-arm-mystudy/blob/3352be2673c4706b21eabe28222cebb1bc8700fc/markdown_doc/Q05_deviceTree.md)
 
