@@ -40,7 +40,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 ## Linux 驱动部分
 
-[Cortex-A7 架构](https://github.com/LQF376/Linux-arm-mystudy/issues/19#issue-1745835781)
+[Cortex-A7 架构](https://github.com/LQF376/Linux-arm-mystudy/blob/d7aa0799018403649bd04652af1a49526c1ae3e5/markdown_doc/Q01_A7arm.md)
 
 [Linux内核移植及根文件系统的构建](https://github.com/LQF376/Linux-arm-mystudy/issues/2#issue-1725272226)
 
