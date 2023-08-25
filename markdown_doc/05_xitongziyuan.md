@@ -421,6 +421,24 @@ void *pvalloc(size_t size);
 
 虚拟文件系统（本身不存在于磁盘中），以文件系统的方式为应用层访问系统内核提供数据接口；提供系统中进程相关信息；内核运行的状态
 
+/proc 目录下面有很多以数字命名的文件夹，每个数字代表一个进程（进程的 PID 号），文件中记录了进程的相关信息
+
+> /proc 目录下还有一下虚拟文件：
+> - cmdline：内核启动参数
+> - cpuinfo：CPU相关信息
+> - iomem：IO设备的内存使用情况
+> - interrupts：显示被占用的中断号和占用者相关的信息
+> - ioports：IO端口的使用情况
+> - kcore：系统物理内存映像，不可读取
+> - loadavg：系统平均负载
+> - meminfo：物理内存和交换分区使用情况
+> - modules：加载的模块列表
+> - mounts：挂载的文件系统列表
+> - partitions：系统识别的分区表
+> - swaps：交换分区的利用情况
+> - version：内核版本信息
+> - uptime：系统运行时间
+
 ### 8.1 proc 文件系统的使用
 
 cat 查看 或者 open read
