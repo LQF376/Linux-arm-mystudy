@@ -44,7 +44,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [Linux内核移植及根文件系统的构建](https://github.com/LQF376/Linux-arm-mystudy/blob/a406ab634f5632f21f98a5031d95136bbcb5ceb6/markdown_doc/Q02_rootfsYizhi.md)
 
-[字符设备驱动（旧）](https://github.com/LQF376/Linux-arm-mystudy/issues/15#issue-1743746305)
+[字符设备驱动（旧）](https://github.com/LQF376/Linux-arm-mystudy/blob/ffd41d55f65012d9da0a9537c89c6359a314ed69/markdown_doc/Q03_zifudevice.md)
 
 [新字符设备驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/16#issue-1743809110)
 
