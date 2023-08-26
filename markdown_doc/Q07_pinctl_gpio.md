@@ -6,7 +6,7 @@
 
 ### 1. PIN 配置信息（设备树里面设置 PIN 信息）
 
-```
+```c
 /* imx6ull.dtsi */
 iomuxc: iomuxc@020e0000 {
 	compatible = "fsl,imx6ul-iomuxc";	// 用来查找对应的驱动文件
@@ -30,7 +30,7 @@ iomuxc: iomuxc@020e0000 {
 	};
 ```
 
-```
+```c
 /* imx6ul-pinfunc.h 宏定义 */
  #define MX6UL_PAD_UART1_RTS_B__GPIO1_IO19 0x0090 0x031C 0x0000 0x5 0x0
  --------------------------------------------------------------
@@ -51,7 +51,7 @@ pinctrl 用来设置引脚的复用功能和电气属性，如果 pinctrl 子系
 
 在 pinctrl 设置为 gpio 复用后，需要在相应的设备节点下添加一个属性来描述哪一个 GPIO 
 
-```
+```c
 &usdhc1 {
 	pinctrl-names = "default", "state_100mhz", "state_200mhz";
 	pinctrl-0 = <&pinctrl_usdhc1>;
@@ -62,7 +62,7 @@ pinctrl 用来设置引脚的复用功能和电气属性，如果 pinctrl 子系
 };
 ```
 
-```
+```c
 /* imx6ull.dtsi */
 gpio1: gpio@0209c000 {
 	compatible = "fsl,imx6ul-gpio", "fsl,imx35-gpio";	// 用来匹配 GPIO 驱动程序
@@ -80,7 +80,7 @@ gpio1: gpio@0209c000 {
 
 - 申请一个 GPIO 管脚
 
-```
+```c
 int gpio_request(unsigned gpio, const char *label);
 gpio：要申请的 GPIO 标号
 label：给 GPIO 设置个名字
@@ -89,7 +89,7 @@ label：给 GPIO 设置个名字
 
 - 释放某个 GPIO
 
-```
+```c
 void gpio_free(unsigned gpio);
 gpio：要释放的 GPIO 标号
 返回值：无
@@ -97,7 +97,7 @@ gpio：要释放的 GPIO 标号
 
 - 设置某个 GPIO 为输入
 
-```
+```c
 int gpio_direction_input(unsigned gpio)
 gpio：要设置为输入的gpio标号
 返回值：0-> 成功 负值->失败
@@ -105,7 +105,7 @@ gpio：要设置为输入的gpio标号
 
 - 设置某个 GPIO 为输出，并设置默认输出值
 
-```
+```c
 int gpio_direction_output(unsigned gpio, int value)
 gpio： 要设置为输出的 gpio 标号
 value：GPIO默认输出值
@@ -114,7 +114,7 @@ value：GPIO默认输出值
 
 - 获取某个GPIO的值（0或者1）
 
-```
+```c
 #define gpio_get_value	__gpio_get_value
 int __gpio_get_value(unsigned gpio)
 gpio: gpio 标号
@@ -123,7 +123,7 @@ gpio: gpio 标号
 
 - 设置某个 GPIO 的值
 
-```
+```c
 #define gpio_set_value	__gpio_set_value
 void __gpio_set_value(unsigned gpio, int value)
 gpio：要设置的 gpio 标号
@@ -137,7 +137,7 @@ value：要设置的值
 
 - 获取设备树某个属性里面定义了几个 GPIO 信息（空的 GPIO 信息也会被统计）
 
-```
+```c
 int of_gpio_named_count(struct device_node *np, const char *propname)
 np：设备节点
 propname：要统计的 GPIO 属性
@@ -146,7 +146,7 @@ propname：要统计的 GPIO 属性
 
 - 统计 "gpios" 这个属性的 GPIO 数量
 
-```
+```c
 int of_gpio_count(struct device_node *np)
 np：设备节点
 返回值： 统计到的 GPIO 数量
@@ -154,7 +154,7 @@ np：设备节点
 
 - 获取 GPIO 编号；将<&gpio5 7 GPIO_ACTIVE_LOW>的属性信息转换为对应的GPIO编号
 
-```
+```c
 int of_get_named_gpio(struct device_node *np, const char *propname, int index)
 np：设备节点
 propname：获取 GPIO 信息的属性名
@@ -166,7 +166,7 @@ index：GPIO索引（一个属性里面可能包含多个 GPIO）
 
 1. 添加 pinctrl 节点
 
-```
+```c
 /* iomuxc 节点的 imx6ul-evk 子节点下 创建一个 pinctrl_led 子节点 */
 pinctrl_led:ledgrp{
 	fsl,pins = <
@@ -195,7 +195,7 @@ gpioled{
 
 ### 2. LED驱动程序
 
-```
+```c
 #include <linux/types.h>
 #include <linux/kernel.h>
 #include <linux/delay.h>
@@ -385,7 +385,7 @@ MODULE_AUTHOR("zuozhongkai");
 
 ### 4. 编译运行 驱动程序和测试APP
 
-```
+```shell
 depmod
 modprobe gpioled.ko		// 加载驱动
 
