@@ -5,7 +5,7 @@
 
 1. 添加 pinctrl 节点
 
-```
+```c
 /* iomuxc 节点的 imx6ul-evk 子节点下 创建一个 pinctrl_beep 子节点 */
 pinctrl_beep:beepgrp{
 	fsl,pins = <
@@ -17,7 +17,7 @@ pinctrl_beep:beepgrp{
 
 2. 添加LED设备节点
 
-```
+```c
 /* 根目录下，创建 beep 节点 */
 beep{
 	#address-cells = <1>;
