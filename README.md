@@ -60,7 +60,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [Linux 内核定时器](https://github.com/LQF376/Linux-arm-mystudy/blob/2453bb28cb7026468b8d220b6a1f40b7eb176672/markdown_doc/Q10_neihedingshiqi.md)
 
-[异步通知（信号）](https://github.com/LQF376/Linux-arm-mystudy/issues/38#issue-1791336586)
+[异步通知（信号）](https://github.com/LQF376/Linux-arm-mystudy/blob/f9b33f3389f1c490eb09ddec20b9c50465b5e07c/markdown_doc/Q11_yibutongzhi.md)
 
 [platform 设备驱动 ](https://github.com/LQF376/Linux-arm-mystudy/blob/334a51b8ffb0c9126c96ea1d1118c22c6dd07753/markdown_doc/Q12_platfrom.md)
 
