@@ -30,7 +30,7 @@ linux 提供两组原子操作 API 函数
 
   定义了 atomic_t 的结构体来代替整形变量进行原子操作
 
-```
+```c
 /* 结构体定义在 include/linux/types.h */
 typedef struct{
 	int counter;
@@ -59,7 +59,7 @@ atomic_t b = ATOMIC_INIT(0);	// 定义原子变量b并赋初值为0
 - 自旋锁就是若锁被其他线程所占有，线程就会不断查询，处于忙循环-旋转-等待状态，不会进入休眠状态或者说去做其他的处理
 - 适用于短时期的轻量级加锁，会浪费处理器事件，降低系统性能
 
-```
+```c
 /* Linux 内核使用 spinlock_t 表示自旋锁 */
 /* 内核关于自旋锁的定义 */
 typedef struct spinlock {
@@ -77,7 +77,7 @@ typedef struct spinlock {
 } spinlock_t;
 ```
 
-```
+```c
 spinlock_t lock; 	// 使用自旋锁之前要定义自旋锁
 ```
 
@@ -93,7 +93,7 @@ spinlock_t lock; 	// 使用自旋锁之前要定义自旋锁
 
    ![1678793895736](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1678793895736.png)
 
-```
+```c
 /* 中断中使用自旋锁的一个demo */
 DEFINE_SPINLOCK(lock) /* 定义并初始化一个
 
@@ -123,7 +123,7 @@ void irq()
    - 一次只能允许一个写操作，一个线程持有写锁，且不能进行读操作
    - 没有写操作的时候允许一个或者多个线程持有读锁，可以进行并发的读操作
 
-   ```
+   ```c
    /* Linux 内核 使用 rwlock_t 表示 读写锁 */
    typedef struct {
    	arch_rwlock_t raw_lock;
@@ -140,7 +140,7 @@ void irq()
    - 允许在写的时候进行读操作，实现同时读写，但是不允许同时进行并发的写操作。
    - 循序锁保护的资源不可以是指针，在写的时候会使指针短时失效，读取野指针会发生意外
 
-   ```
+   ```c
    /* Linux 内核使用 seqlock_t 表示顺序锁 */
    typedef struct{
    	struct seqcount seqcount;
@@ -160,7 +160,7 @@ void irq()
 - 不能用于中断，因为信号量会引起休眠
 - 初始化信号量大于1，计数型信号量（不可用于互斥访问）；初始化不大于1，二值信号量
 
-```
+```c
 /* Linux内核使用 semaphore 表示信号量 */
 struct semaphore{
 	raw_spinlock_t	lock;
@@ -171,7 +171,7 @@ struct semaphore{
 
 ![1678797446090](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1678797446090.png)
 
-```
+```c
 /* demo */
 struct semaphore sem;	// 定义信号量
 sema_init(&sem, 1);		// 初始化信号量
@@ -187,7 +187,7 @@ up(&sem);				// 释放信号量
 - mutex 可能导致休眠，因此中断中不能使用 mutex，中断中只能使用自旋锁
 - 和信号量一样，mutex 保护的临界区内可以调用引起阻塞的 API 函数
 
-```
+```c
 struct mutex{
 	/* 1:未锁 0：上锁 */
 	atomic_t count;
@@ -197,7 +197,7 @@ struct mutex{
 
 ![1678798483962](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1678798483962.png)
 
-```
+```c
 struct mutex lock;		// 定义互斥锁
 mutex_init(&lock);		// 初始化互斥锁
 mutex_lock(&lock);		// 上锁
