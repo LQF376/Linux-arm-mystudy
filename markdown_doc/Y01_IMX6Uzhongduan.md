@@ -22,7 +22,7 @@ ARM 处理器都是从地址 0X0000 0000 开始运行，代码是下载到 0X800
 
 **Cortex-A7 一共有 8 个中断（一个没用，实际只有 7 个中断）**
 
-![1686819263262](E:\typora\markdownImage\1686819263262.png)
+![1686819263262](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686819263262.png)
 
 - 复位中断(Rest)：CPU 复位以后就会进入复位中断，在复位中断服务函数里面做一些初始化工作，比如初始化 SP 指针、 DDR 等等 
 - 未定义指令中断(Undefined Instruction)，如果指令不能识别的话就会产生此中断
@@ -100,7 +100,7 @@ FIQ_Handler:
 - GIC 是 ARM 公司 为 Cortex-A/R 内核提供的一个中断控制器，目前 GIC 有 4 个版本：V1~V4（Cotex-A7用的是v2）
 - 当 GIC 接收到外部中断信号以后就会报告给 ARM 内核，ARM 内核只提供了 四个信号给 GIC 来汇报中断情况
 
-![1686821124221](E:\typora\markdownImage\1686821124221.png)
+![1686821124221](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686821124221.png)
 
 > - VFIQ：虚拟快速 FIQ 
 > - VIRQ：虚拟外部 IRQ 
@@ -135,7 +135,7 @@ I.MX6U 的中断源共有 128 + 32 = 160 个（128 个 SPI + 32 个 SGI和PPI）
 
 - I.MX6ULL 参考手册 “3.2 Cortex A7 interrupts” 
 
-![1686827265272](E:\typora\markdownImage\1686827265272.png)
+![1686827265272](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686827265272.png)
 
 ```c
 /* MCIMX6Y2C.h(移植文件) */
@@ -234,13 +234,13 @@ opc2:可选的协处理器特定操作码，当不需要的时候要设置为 0
 
 **c0 寄存器**
 
-![1686830207109](E:\typora\markdownImage\1686830207109.png)
+![1686830207109](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686830207109.png)
 
 CRn=c0， opc1=0， CRm=c0， opc2=0 的时候就表示此时的 c0 就是 MIDR 寄存器
 
 - MIDR 寄存器，主 ID 寄存器
 
-  ![1686830303064](E:\typora\markdownImage\1686830303064.png)
+  ![1686830303064](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686830303064.png)
 
   > bit31:24：厂商编号， 0X41， ARM 
   >
@@ -254,13 +254,13 @@ CRn=c0， opc1=0， CRm=c0， opc2=0 的时候就表示此时的 c0 就是 MIDR 
 
 **c1 寄存器**
 
-![1686830418545](E:\typora\markdownImage\1686830418545.png)
+![1686830418545](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686830418545.png)
 
 CRn=c1， opc1=0， CRm=c0， opc2=0 的时候就表示此时的 c1 就是 SCTLR 寄存器
 
 - SCTLR 寄存器（系统控制寄存器），主要完成控制功能，比如使能或者禁止 MMU、I/D Cache 等
 
-  ![1686832331820](E:\typora\markdownImage\1686832331820.png)
+  ![1686832331820](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686832331820.png)
 
   > bit13： V , 中断向量表基地址选择位，为 0 的话中断向量表基地址为 0X00000000，软件可以使用 VBAR 来重映射此基地址，也就是中断向量表重定位。为 1 的话中断向量表基地址为0XFFFF0000，此基地址不能被重映射 
   >
@@ -280,7 +280,7 @@ CRn=c1， opc1=0， CRm=c0， opc2=0 的时候就表示此时的 c1 就是 SCTLR
 
 **c12 寄存器**
 
-![1686832531212](E:\typora\markdownImage\1686832531212.png)
+![1686832531212](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686832531212.png)
 
 CRn=c12， opc1=0， CRm=c0， opc2=0 的时候就表示此时 c12 为 VBAR 寄存器 
 
@@ -288,7 +288,7 @@ CRn=c12， opc1=0， CRm=c0， opc2=0 的时候就表示此时 c12 为 VBAR 寄�
 
 **c15 寄存器**
 
-![1686832712238](E:\typora\markdownImage\1686832712238.png)
+![1686832712238](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686832712238.png)
 
 - CBAR 寄存器：GIC 的基地址就保存在 CBAR 中
 
@@ -312,7 +312,7 @@ MRC p15, 4, r1, c15, c0, 0 ;  //获取 GIC 基础地址，基地址保存在 r1 
 - 寄存器 CPSR 的 I=1 禁止 IRQ，I=0使能 IRQ；F=1 禁止 FIQ，F=0 使能 FIQ
 - 也可以用指令来完成 IRQ 和 FIQ 的使能和禁止
 
-![1686833436117](E:\typora\markdownImage\1686833436117.png)
+![1686833436117](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686833436117.png)
 
 #### 1.3.2 ID0 ~ ID1019 中断使能和禁止
 
@@ -340,9 +340,9 @@ MRC p15, 4, r1, c15, c0, 0 ;  //获取 GIC 基础地址，基地址保存在 r1 
 
 - 低八位有效，用来决定用几级优先级（总共有多少级优先级）
 
-![1686834603257](E:\typora\markdownImage\1686834603257.png)
+![1686834603257](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686834603257.png)
 
-![1686834617251](E:\typora\markdownImage\1686834617251.png)
+![1686834617251](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686834617251.png)
 
 I.MX6U 是 Cortex-A7内核，所以支持 32 个优先级，因此 GICC_PMR 要设置为 0b11111000 
 
@@ -352,11 +352,11 @@ I.MX6U 是 Cortex-A7内核，所以支持 32 个优先级，因此 GICC_PMR 要�
 
 - 用来决定 抢占优先级和子优先级各占多少位
 
-![1686834798581](E:\typora\markdownImage\1686834798581.png)
+![1686834798581](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686834798581.png)
 
 低三位有效，用来决定抢占优先级和子优先级的位数
 
-![1686834967982](E:\typora\markdownImage\1686834967982.png)
+![1686834967982](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686834967982.png)
 
 I.MX6U 的优先级位数为 5(32 个优先级)，所以可以设置 Binary point 为 2，表示 5 个优先级位全部为抢占优先级 
 
@@ -376,7 +376,7 @@ GICD_IPRIORITYR[40] = 5 << 3;
 
 core_ca7.h 10个 API：
 
-![1686835424123](E:\typora\markdownImage\1686835424123.png)
+![1686835424123](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1686835424123.png)
 
 ### 2.2 实验代码
 
