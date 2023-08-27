@@ -33,7 +33,7 @@
 
   flags 标志位： 
 
-  ![1678868445985](E:\typora\markdownImage\1678868445985.png)
+  ![1678868445985](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1678868445985.png)
 
 - 释放相应的中断
 
@@ -328,7 +328,7 @@ gpio5: gpio@020ac000 {
 -----------------------------------------------------
 ```
 
-![1685080442438](E:\typora\markdownImage\1685080442438.png)
+![1685080442438](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1685080442438.png)
 
 ```c
 /* imx6ill-alientek-emmc.dts */
@@ -360,7 +360,7 @@ gpio：要获取的 gpio 编号
 
 采用中断的方式，并且采用定时器来实现按键消抖，应用程序读取按键值并通过终端打印出来
 
-![1685080933217](E:\typora\markdownImage\1685080933217.png)
+![1685080933217](https://raw.githubusercontent.com/LQF376/Linux-arm-mystudy/main/markdown_pic/1685080933217.png)
 
 ## 5. 修改设备树
 
