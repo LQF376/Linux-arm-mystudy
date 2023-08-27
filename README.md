@@ -68,6 +68,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [platform 设备驱动 ](https://github.com/LQF376/Linux-arm-mystudy/blob/334a51b8ffb0c9126c96ea1d1118c22c6dd07753/markdown_doc/Q12_platfrom.md)
 
+[platform 设备驱动匹配方式](https://github.com/LQF376/Linux-arm-mystudy/blob/a7442a73a8e19cb0b378b4e6298d4b6044600b75/markdown_doc/Q12_platform_pipei.md)
+
 [MISC驱动（结合 platfrom 和 蜂鸣器）](https://github.com/LQF376/Linux-arm-mystudy/blob/0746478bd21a82aca2fbaf1160869396b2d537d1/markdown_doc/Q13_fuzaqvdong.md)
 
 [Input 子系统](https://github.com/LQF376/Linux-arm-mystudy/blob/298903f1a2d46885c025963d2c68f7c1313caf59/markdown_doc/Q14_inputzixitong.md)
