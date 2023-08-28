@@ -86,7 +86,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [Linux CAN 通信（通信原理及驱动）](https://github.com/LQF376/Linux-arm-mystudy/blob/738bad7383b807126a252bf3eca81e879d7033ee/markdown_doc/Q19_CAN.md)
 
-[块设备驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/13#issue-1738324352)
+[块设备驱动](https://github.com/LQF376/Linux-arm-mystudy/blob/f3f51d16341e87fe02f4f267359ece0cc50b9e65/markdown_doc/Q21_kuaishebei.md)
 
 ## 其他
 
