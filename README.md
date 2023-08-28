@@ -82,7 +82,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [Linux 下 SPI 驱动](https://github.com/LQF376/Linux-arm-mystudy/blob/b6040e7458bf5216f495b798bc234a440c83ee2f/markdown_doc/Q17_SPI.md)
 
-[Linux 下 UART 驱动](https://github.com/LQF376/Linux-arm-mystudy/issues/44#issue-1796328647)
+[Linux 下 UART 驱动](https://github.com/LQF376/Linux-arm-mystudy/blob/ad388dd2ae56d00ac34d77fc8873e83edaeea627/markdown_doc/Q18_UART.md)
 
 [Linux CAN 通信（通信原理及驱动）](https://github.com/LQF376/Linux-arm-mystudy/issues/45#issue-1798234100)
 
