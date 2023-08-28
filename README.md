@@ -7,7 +7,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 ## git
 
-[Git 的使用说明](https://github.com/LQF376/Linux-arm-mystudy/issues/29#issue-1773257271)
+[Git 的使用说明](https://github.com/LQF376/Linux-arm-mystudy/blob/b693e427c11f38229ebe3cb88c41899cbeba8c40/markdown_doc/Git.md)
 
 ## 通信协议
 
