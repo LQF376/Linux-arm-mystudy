@@ -13,7 +13,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [MQTT](https://github.com/LQF376/Linux-arm-mystudy/blob/b189d27df2b2c7821b0e73dd5172f11c1c733b1c/markdown_doc/MQTT.md)
 
-[I2C](https://github.com/LQF376/Linux-arm-mystudy/issues/9#issue-1730906676)
+[I2C](https://github.com/LQF376/Linux-arm-mystudy/blob/3a0b0279e0a5ce35fba6521f7c76fd29ee8add35/markdown_doc/Y02_I2C.md)
 
 [SPI](https://github.com/LQF376/Linux-arm-mystudy/issues/10#issue-1732279329)
 
