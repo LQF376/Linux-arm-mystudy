@@ -95,3 +95,5 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 ## cpp 基础
 
 [菜鸟教程/基础语法](https://www.runoob.com/cplusplus/cpp-multithreading.html)
+
+[常见排序](https://github.com/LQF376/Linux-arm-mystudy/blob/d8562a7442709686b4d5460ec910b549c7edadb5/cpp/paixv.md)
