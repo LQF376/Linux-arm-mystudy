@@ -94,7 +94,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [流媒体 MJPG方案&ffmpeg方案](https://github.com/LQF376/Linux-arm-mystudy/blob/188cce8f98d33b7b9a8bf4fd5d9733b09df6100c/markdown_doc/MJPG_ffmpeg.md)
 
-## cpp 基础
+## cpp 杂记
 
 [菜鸟教程/基础语法](https://www.runoob.com/cplusplus/cpp-multithreading.html)
 
