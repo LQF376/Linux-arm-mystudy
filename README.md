@@ -50,6 +50,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [新字符设备驱动](https://github.com/LQF376/Linux-arm-mystudy/blob/26a49bbf388d472fa9c478bc3db14db7c93a5773/markdown_doc/Q04_newchrdev.md)
 
+[字符设备匹配](https://github.com/LQF376/Linux-arm-mystudy/blob/9024255f1aa0e4aefda43a81785e0ca76fe6c32c/markdown_doc/Q12_platform_pipei.md)
+
 [设备树](https://github.com/LQF376/Linux-arm-mystudy/blob/3352be2673c4706b21eabe28222cebb1bc8700fc/markdown_doc/Q05_deviceTree.md)
 
 [OF设备树函数](https://github.com/LQF376/Linux-arm-mystudy/blob/aa45b992656c05818fa39f92aea5009fc599af4c/markdown_doc/of_devicetree.md)
