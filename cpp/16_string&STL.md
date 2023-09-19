@@ -1,4 +1,170 @@
-## 标准模板库
+# 16 string & STL
+
+## 16.1 string 类
+
+#include<string> 头文件
+
+### 16.1.1 构造函数
+
+```cpp
+string(const char *s);
+string(size_typen n, char c);
+string(const string & str);
+string();
+
+template<class Iter>
+string(Iter begin, Iter end);			// [begin, end)
+
+string(const string &str, string size_type pos = 0, size_type n = npos);
+string(string && str)noexcept;			// c++11
+string(initializer_list<class>il)		// C++11
+```
+
+> = 运算符重载，可以将 string 对象、C风格字符串、char字符赋给 string 对象
+>
+> += 运算符重载，可以将一个字符串附加到另一个字符串的后面
+>
+> [] 运算符重载，可以用于访问字符串中的各个字符
+
+### 16.1.2 string 类输入
+
+getline 停止条件：
+
+- 到达文件末尾
+- 遇到分界字符，通常是 \n
+- 读取的字符数达到最大允许值
+
+```cpp
+/* char */
+char info[100];
+cin >> info;
+cin.getline(info, 100);		// 需要指定长度
+cin.get(info, 100);
+
+/* sting */
+string stuff;
+cin >> stuff;
+getline(cin, stuff);		// 不需要指定长度
+```
+
+### 16.1.3 使用字符串
+
+```cpp
+size_type find(const string &str, size_type pos = 0)const;
+size_type find(const char* s, size_type pos = 0)const;
+size_type find(const char* s, size_type pos = 0, size_type n);	// 查找 s 前 n 个字符是否出现
+size_type find(char ch, size_type pos = 0)const;
+```
+
+```cpp
+rfind()		// 查找子字符串或字符最后一次出现的位置
+find_first_of()		// 在字符串中查找参数中任何一个字符首次出现的位置
+find_last_of()			// 在字符串中查找参数中任何一个字符最后一次出现的位置
+find_first_not_of()		// 字符串中查找第一个不包含在参数中的字符
+```
+
+```cpp
+capacity()			// 返回当前分配非字符串的内存块大小
+reserve()			// 让你能够请求内存块的最小长度
+c_str()				// 将 string 转换 字符串
+```
+
+## 16.2 智能指针模板类
+
+智能指针是行为类似于指针的类对象；可以将 new 获得的地址赋给智能指针，当指针对象过期时，它会自动调用其析构函数调用 delete 释放指向的内存；好处就是 创建对象之后，不用自己手动的去释放它
+
+- 可以对它执行解引用操作
+- 可以用它来访问结构成员
+- 将它赋给指向相同类型的常规指针
+- 将智能指针对象赋给另一个同类型的智能指针
+
+> - auto_ptr ：C++98的解决方案
+> - unique_ptr
+> - shared_ptr
+
+注意：使用智能指针的时候应该避免其指向非堆区内存（delete 无法释放）
+
+```cpp
+#include<memory>			// 使用智能指针的头文件
+
+auto_ptr<double> pd(new double);
+unique_ptr<double> pdu(new double);
+shared_ptr<string> ps(new string);
+```
+
+### 16.2.2 智能指针的注意事项
+
+- 2 个智能指针指向同一个堆内存开辟对象时，会释放两次问题（auto_ptr 指针在使用过程中容易引起）
+
+  > - 定义赋值运算符，执行深拷贝；两个指针指向不同的对象，其中一个对象是另一个对象的副本
+  > - 建立所有权概念；对于特定的对象，只能有一个智能指针可拥有它（auto_ptr 和 unique_ptr 的策略）
+  > - 创建智能更高的指针，跟踪引用特定对象的智能指针计数（引用计数）；赋值时，引用计数+1，指针过期时，引用计数-1，仅当最后一个指针过期时，才调用 delete （shared_ptr 的策略）
+
+```cpp
+auto_ptr<string>  p1 (new string("Fowl Balls"));
+auto_ptr<string> p2;
+p2 = p1;		// p2 接管 string的所有权， p1所有权被剥夺
+*p1;			// 报段错误
+```
+
+```cpp
+unique_ptr<string>  p1 (new string("Fowl Balls"));
+unique_ptr<string> p2;
+p2 = p1;		// 编译器直接报错，unique 拥有更严格的所有权条件，不允许交换所有权
+
+/* 但是 unique_ptr 允许接收右值性质的 unique */
+// demo1
+unique_ptr<string> demo(const char * s)
+{
+	unique_ptr<string> temp (new string (s));
+	return temp;
+}
+
+unique_ptr<string> ps;
+ps = demo("Uniquely special");		// 函数返回值是右值
+
+// demo2
+unique_ptr<string> p3;
+p3 = unique_ptr<string> (new string("hello"));			// 匿名对象，右值
+
+/* 使用移动语义来使用 unique_ptr */
+unique_ptr<string> p1(new sring("hello"));
+unique_ptr<string> p2;
+p2 = std::move(p1);
+```
+
+unique_ptr 相对于 auto_ptr 还有一个优点：有使用 new[] 和 delete[] 版本
+
+```cpp
+unique_ptr<double[]> p1 (new double(5));		// 不太懂
+```
+
+### 16.2.4 选择智能指针
+
+- 如果程序要使用多个指向同一个对象的指针，应该使用 share_ptr
+- 如果程序不需要多个指向同一个对象的指针，则可使用 unique_ptr（有注意点），若编译器不支持，则可以使用 auto_ptr
+
+```cpp
+unique_ptr<int> make_int(int n)
+{
+	return unique_ptr<int> (new int(n));
+}
+void show(unique_ptr<int> & p)		// 此处一定要引用，不可用值传递，值传递报错
+{
+	cout << *p << " ";
+}
+int main()
+{
+	vector<unique_ptr<int>> vp(size);
+	for(int i = 0; i < vp.size(); i++)
+	{
+		vp[i] = make_int(rand() % 1000)；
+	}
+	for_each(vp.begin(), vp.end(), show);
+}
+```
+
+## 16.3 标准模板库
 
 ### 16.4.2 迭代器类型
 
