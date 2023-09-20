@@ -98,6 +98,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [菜鸟教程/基础语法](https://www.runoob.com/cplusplus/cpp-multithreading.html)
 
+[string类和STL库](https://github.com/LQF376/Linux-arm-mystudy/blob/8ebfefa849ddeedd62550dafb1e4fec360f764a9/cpp/16_string%26STL.md)
+
 [C++11新特性](https://github.com/LQF376/Linux-arm-mystudy/blob/8b487c34678c841edaed9f42da974664442a4422/cpp/18_c%2B%2B11new_feature.md)
 
 [常见排序](https://github.com/LQF376/Linux-arm-mystudy/blob/d8562a7442709686b4d5460ec910b549c7edadb5/cpp/paixv.md)
