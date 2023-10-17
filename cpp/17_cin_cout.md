@@ -30,7 +30,7 @@ cout << 88;
 
 | const signed char * | const unsigned char* |
 | :-----------------: | :------------------: |
-|     const char*     |      **void ***      |
+|     const char*     |      **void***      |
 
 ````cpp
 // 插入运算符还可以输出指针类型(char*、void*)
