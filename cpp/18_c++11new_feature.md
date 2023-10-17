@@ -1,14 +1,16 @@
 # 18. C++ 新特性
 
-## 18.1 C++11新特性
+## 1. C++11新特性
 
-### 18.1.1 新类型
+### 新增类型
 
-C++11 新增类型 long long 和 unsigned long long，以支持64位长整型；新增类型 char16_t 和 char32_t 以支持16位和32位字符表示
+- C++11 新增类型 long long 和 unsigned long long，以支持64位长整型；
+- 新增类型 char16_t 和 char32_t 以支持16位和32位字符表示
 
-### 18.1.2 统一的初始化
+### 统一的初始化
 
-扩大了 用大括号括起的列表（初始化列表）的使用范围，使其可用于所有内置类型和用户定义的类型；初始化列表时，可添加等号（=），也可不添加
+- 扩大了 用大括号括起的列表（初始化列表）的使用范围，使其可用于所有内置类型和用户定义的类型；
+- 初始化列表时，可添加等号（=），也可不添加
 
 ```cpp
 int x = {5};
@@ -39,7 +41,7 @@ stump s3 = {4, 32.1};
 
 2. std:initializer_list
 
-   C++11 提供模板类 initializer_list，可将其作为构造函数的参数，如果类有接受 initializer_list 作为参数的构造函数，则初始化列表语法只能用于该构造函数
+   - C++11 提供模板类 initializer_list，可将其作为构造函数的参数，如果类有接受 initializer_list 作为参数的构造函数，则初始化列表语法只能用于该构造函数
 
    列表中的元素必须是同一类型或可转换为同一类型的
 
@@ -97,7 +99,7 @@ stump s3 = {4, 32.1};
 
    对于冗长复杂的标识符，可以为其创建别名
 
-   ```
+   ```cpp
    typedef std::vector<std::string>::iterator itType;
    
    using itType = std::vector<std::string>::iterator;
@@ -122,17 +124,20 @@ C++ 提供一种语法，可用于指出函数可能引发哪些异常；C++11�
 void f501(int) throw(bad_dog);
 void f733(int) throw();			// 指出函数可能引起哪些异常
 
-void f875(short, short);		// 指出函数不会引发异常
+void f875(short, short) noexcept;		// 指出函数不会引发异常
 ```
 
 ### 18.1.6 作用域内枚举
 
-新枚举要求进行显示限定，以免发生名称冲突
+- 新枚举要求进行显示限定，以免发生名称冲突
+- 枚举名的作用域为枚举定义所属的作用域，在同一作用域内定义两个枚举，枚举成员不能同名
 
 ```cpp
 enum Old {yes, no, maybe};			// 旧版本
 enum class New1 {never, sometimes, often, always};	// C++11
 enum struct New2 {never, lever, sever};			// C++11
+
+New1::never		// 新枚举要求进行显式限定，以免发生名称冲突
 ```
 
 ### 18.1.7 对类的修改
@@ -192,7 +197,7 @@ enum struct New2 {never, lever, sever};			// C++11
 
    支持在类定义中初始化成员；可使用等号或大括号版本的初始化（不可使用小括号）
 
-   ```
+   ```cpp
    class Session
    {
    	int mem1 = 10;
@@ -402,7 +407,7 @@ Useless & Useless::operator=(const Useless && f)
 
 将左值转化为右值，进而调用移动构造或者移动赋值运算符；C++11 使用头文件 utility 中声明的 std::move() 函数实现
 
-```
+```cpp
 Useless one(10, 'x');
 Useless two;
 two = std::move(one);
@@ -442,13 +447,46 @@ public:
 - 关键字 delete 可用于禁止编译器使用特定的方法；禁用函数只用于查找匹配函数，使用它们将导致编译错误；可用于任何成员函数
 - 要禁止复制，可以将复制构造函数和复制赋值运算符放在类定义的 private 中
 
+```cpp
+class Someclass
+{
+public:
+	Someclass() = default;
+	Someclass(const Someclass&) = delete;
+	Someclass(const Someclass&&) = default;
+};
+```
+
 ### 18.3.3 委托构造函数
 
-委托：C++11 允许在一个构造函数的定义中使用另一个构造函数；
+委托：C++11 允许在一个构造函数的定义中使用另一个构造函数；是彼此调用
+
+```cpp
+class Notes
+{
+	int k;
+	double x;
+	std::string st;
+public:
+	Notes();
+	Notes(int);
+	Notes(int, double);
+	Notes(int, double, std::string);
+};
+
+Notes::Notes(int kk, double xx, std::string stt): k(kk), x(xx), st(stt)
+{}
+Notes::Notes():Notes(0, 0.01, "Oh")
+{}
+Notes::Notes(int kk):Notes(kk, 0.01, "Ah")
+{}
+Notes::Notes(int kk, double xx):Notes(kk, xx, "Uh")
+{}
+```
 
 ### 18.3.4 继承构造函数
 
-C++11 提供一种让派生类能够继承基类构造函数的机制
+C++11 提供一种让派生类能够继承基类构造函数的机制（派生类去调用基类的构造函数）
 
 ```cpp
 class C1
@@ -493,10 +531,15 @@ public:
 
 ### 18.3.5 虚函数管理方法 override 和 final
 
-假设基类声明了一个虚方法，而您决定在派生类中提供不同的版本，这将覆盖旧版本
+假设基类声明了一个虚方法，而您决定在派生类中提供不同的版本，这将覆盖旧版本；如果特征标不匹配，将隐藏而不是覆盖旧版本
 
 - 虚说明符 override 指出要覆盖一个虚函数，将其放在参数列表后面，如果声明与基类方法不匹配，编译器将视为错误
 - 在参数列表后面加上 finial，可禁止派生类覆盖特定的虚方法
+
+```cpp
+virtual void f(char * ch) const override {...}
+virtual void f(char * ch) const final {...}
+```
 
 ## 18.4 Lambda 函数（匿名函数）
 
@@ -533,7 +576,7 @@ bool is_div_by_3 = obj(7);
 [](double)->double(int y = x; return x-y;)
 ```
 
-```
+```cpp
 /* 给 Lambda 一个名字 */
 auto mod3 = [](int x) {return x % 3 == 0};
 bool result = mod3(z);			// 可以像函数一样调用
@@ -546,7 +589,7 @@ lambda 可以访问作用域内的任何动态变量；捕获要使用的变量�
 - [&]：按引用访问所有动态变量
 - [=]：按值访问所有动态变量
 
-## 18.5 包装器
+## 18.5 包装器（相当于函数指针）
 
 ### 18.5.1 function包装器和模板低效性
 
