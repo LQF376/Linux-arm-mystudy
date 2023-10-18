@@ -107,3 +107,7 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 [常见排序](https://github.com/LQF376/Linux-arm-mystudy/blob/d8562a7442709686b4d5460ec910b549c7edadb5/cpp/paixv.md)
 
 [二叉树遍历](https://github.com/LQF376/Linux-arm-mystudy/blob/95491bb4df5aa05847f23355ee403054c2f8f324/cpp/TreeNode_traversal.md)
+
+## 典型
+
+[典型算法](https://github.com/LQF376/Linux-arm-mystudy/blob/3a43f1ac9748b1c080528a8354ace51cbbe4d0a6/cpp/algorithm.md)
