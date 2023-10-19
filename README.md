@@ -98,6 +98,8 @@ markdown 格式的笔记都在 issues 里面！（应用部分笔记之前写在
 
 [菜鸟教程/基础语法](https://www.runoob.com/cplusplus/cpp-multithreading.html)
 
+[友元、异常和强制类型转换](https://github.com/LQF376/Linux-arm-mystudy/blob/6f16ce8cf58f07a3fe0305266259cb8014d2287c/cpp/15_except_friend.md#1-%E7%B1%BB%E5%81%9A%E5%8F%8B%E5%85%83)
+
 [string类和STL库](https://github.com/LQF376/Linux-arm-mystudy/blob/8ebfefa849ddeedd62550dafb1e4fec360f764a9/cpp/16_string%26STL.md)
 
 [输入、输出、文件](https://github.com/LQF376/Linux-arm-mystudy/blob/311127adaf005015be7d005b035b2d46506c4d9d/cpp/17_cin_cout.md)
