@@ -1,5 +1,9 @@
 ## 1. 插入排序
 
+核心思想：从数组的第二数开始，从后向前遍历前面的子数组，数组位置后移，插入到合适的位置中
+
+- 需要保存数组后面一位数，然后对整个数组进行向后移的操作
+
 ```c
 /* 
  * 插入排序，从小到大
@@ -8,7 +12,7 @@
  */
 void insertSort(int arr[], int n)
 {
-    for(int i = 0; i < n; i++)
+    for(int i = 1; i < n; i++)
     {
         int key = arr[i];
         int j = i-1;
@@ -24,6 +28,8 @@ void insertSort(int arr[], int n)
 
 ## 2. 选择排序
 
+核心思想：从第一个索引到 n-1个索引，选出后面子数组最小的值与索引处进行交换
+
 ```c
 /* 
  * 选择排序，从小到大
@@ -32,7 +38,7 @@ void insertSort(int arr[], int n)
  */
 void SelectSort(int arr[], int n)
 {
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n-1; i++)
     {
         int min_index = i;
         for(int j = i+1; j < n; j++)
@@ -84,14 +90,16 @@ void QuickSort(int arr[], int low, int high)
 
 ## 4. 冒泡排序
 
+- 前一个比后一个大就两两交换，把最大的那个数冒泡到最后面，每一轮冒泡一个
+
 ```c
 void PaoSort(int arr[], int n)
 {
-    for(int i = 0; i < n; i++)
+    for(int i = 0; i < n-1; i++)			// 冒泡的轮数
     {
-        for(int j = 0; j + 1 < n - i; j++)
+        for(int j = 0; j + 1 < n - i; j++)	// 进行冒泡的区间范围
         {
-            if(arr[j] > arr[j+1])
+            if(arr[j] > arr[j+1])		// 前一个比后一个大，就进行两两交换，开始冒泡
             {
                 int temp = arr[j];
                 arr[j] = arr[j+1];
@@ -101,4 +109,3 @@ void PaoSort(int arr[], int n)
     }
 }
 ```
-
